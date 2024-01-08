@@ -1,33 +1,82 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Hero } from "../components/Hero.jsx";
-import { Navbar } from "../components/Navbar.jsx";
-import { Features1 } from "../components/Features1.jsx";
-import { Features2 } from "../components/Features2.jsx";
-import { Testimonials } from "../components/Testimonials.jsx";
-import { FeaturesDiagonal } from "../components/FeaturesDiagonal.jsx";
-import { Pricing } from "../components/Pricing.jsx";
-import { FAQ } from "../components/FAQ.jsx";
-import { Brands } from "../components/Brands.jsx";
-import { Divider } from "../components/Divider";
-import { Footer } from "../components/Footer.jsx";
-import { ScrollUpButton } from "../components/ScrollUpButton";
-import "../styles/Theme.css";
-import "../styles/Diagonals.css";
-
+import Layout from '../layouts/Layout.astro';
+import Link_button from '../components/Link_button.astro';
 ---
 
-<Layout title="Tailcast">
-  <Navbar client:load />
-  <Hero client:load />
-  <Features1 client:load />
-  <Divider />
-  <Features2 client:load />
-  <Testimonials client:load />
-  <FeaturesDiagonal client:load />
-  <Pricing client:load />
-  <Brands client:load />
-  <FAQ client:load />
-  <Footer />
-  <ScrollUpButton client:load />
+<Layout title="CEFAI">
+	<main>
+		<div class="mt-10 flex h-screen">
+			<div class=" w-screen grid grid-cols-1 content-center p-12">
+				<h4 class="text-xl sm:text-8xl text-center"><b class="color1">SISTEMAS</b> ALTO VALLE</h4>
+				<p class="text-center"><b>Transforma tu negocio, controla el futuro: Informatización integral para operaciones eficientes y decisiones ágiles.</b></p>
+			</div>
+		</div>
+		<div class="flex h-screen">
+			<div class="sm:w-1/2 w-screen grid grid-cols-1 content-center p-8">
+				<h2 class="text-5xl">La <b class="color1">información</b> de tus <b class="color1">procesos</b> en la palma de tu mano.</h2>
+				<p>Centra la información de tus procesos en un solo lugar; deja de lidiar con cientos de excels. Genera reportes en un segundo y estarás listo para tomar decisiones relevantes en el acto.</p>
+			</div>
+			<div class="w-1/2 sm:grid grid-cols-1 content-center hidden justify-items-end">
+				<img src="/img-1.png" alt="">
+			</div>
+		</div>
+		<div class="flex h-screen content-center">
+			<div class="w-1/2 sm:grid grid-cols-1 content-center hidden">
+				<img src="/img-2.png" alt="">
+			</div>
+			<div class="sm:w-1/2 w-screen grid grid-cols-1 content-center p-8">
+				<h2 class="text-5xl"><b  class="color1">Accede</b> a tu <b class="color1">información</b> desde <b class="color1">cualquier parte</b> del mundo.</h2>
+				<p>No esperes a estar en la oficina para poder ver un informe o el estado operativo de tus procesos, ni tampoco esperes a que el turno de la mañana comience a trabajar para poder acceder a la información. Accede desde cualquier lugar en cualquier momento.</p>
+				<br/>
+			</div>
+		</div>
+		<div class="flex h-screen content-center">
+			<div class="sm:w-1/2 w-screen grid grid-cols-1 content-center p-8">
+				<h2 class="text-5xl">"La <b class="color1">perfección</b> se encuentra en los <b class="color1">detalles</b>". La <b class="color1">detalles</b> también.</h2>
+				<p>Tener la lupa sobre los detalles más pequeños de tus procesos es esencial para la calidad de tus servicios y productos. No los dejes descuidados.</p>
+			</div>
+			<div class="w-1/2 sm:grid grid-cols-1 content-center hidden justify-items-end">
+				<img src="img-3.png" alt="">
+			</div>
+		</div>
+		<div class="mt-10 flex ">
+			<div class=" w-screen flex flex-col text-center items-center p-12">
+				<img src="contac.png" alt="">
+				<h5 class="text-5xl"><b class="color1">Contáctanos</b> y comienza una <b class="color1">nueva etapa</b> en tu negocio.</h5>
+				<p class="text-center"><b>No dudes en escribirnos, síguenos en nuestras redes y aprende más sobre cómo informatizar tu negocio puede mejorar tu trabajo.</b></p>
+				<form class="mt-32 flex flex-col w-5/6 text-left">
+					<label for="">Nombre:</label>
+					<input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" name="" id="nombre">
+					<label for="" class="mt-10">Email:</label>
+					<input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="email" name="" id="email">
+					<label class="mt-10" for="">Mensaje:</label>
+					<textarea rows="5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea>
+					<button type="button" class="w-32 mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
+				</form>
+			</div>
+		</div>
+	</main>
 </Layout>
+<style>
+	.background-animate {
+    background-size: 400%;
+
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+  }
+
+  @keyframes AnimationName {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  main{
+	widows: 100%;
+  }
+</style>
