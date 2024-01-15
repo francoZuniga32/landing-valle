@@ -14,15 +14,12 @@ const { Content } = await entry.render();
 ---
 <Layout title={entry.data.title}>
   <section class="max-h-auto min-h-screen px-6 py-4">
-    <h1>{entry.data.title}</h1>
+    <h1 class="text-4xl">{entry.data.title}</h1>
     <Content />
   </section>
 </Layout>
 
 <style>
-  h1{
-    font-size: 6em;
-  }
 
   ul{
     list-style: circle;
